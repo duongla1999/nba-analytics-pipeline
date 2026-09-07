@@ -11,3 +11,10 @@ wheels/
 
 # Secrets
 .env
+
+# Raw data
+data/
+
+# OS junk files
+Thumbs.db
+.DS_Store
