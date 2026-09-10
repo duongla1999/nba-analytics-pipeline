@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: nba
+    schema: raw
+    tables:
+      - name: games
+      - name: players
+      - name: teamStatistics
+      - name: teamHistories
