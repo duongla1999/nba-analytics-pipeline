@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_teams
+    columns:
+      - name: team_id
+        tests:
+          - not_null
+          - unique
+  
+  - name: dim_players
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+          - unique
+  
+  - name: fct_team_game_stats
+    columns:
+      - name: game_id
+        tests:
+          - not_null
+      - name: team_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_teams')
+              field: team_id
